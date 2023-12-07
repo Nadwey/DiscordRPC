@@ -101,7 +101,7 @@ class DISCORDRPC_API UDiscordRpc : public UObject {
 public:
 
     UFUNCTION(BlueprintPure)
-        int64 GetStartTimeStamp() const {return FDateTime::Now().ToUnixTimestamp();}
+        int64 GetStartTimeStamp() const {return FDateTime::UtcNow().ToUnixTimestamp();}
 
     UFUNCTION(BlueprintCallable,
               meta = (DisplayName = "Initialize connection", Keywords = "Discord rpc"),
